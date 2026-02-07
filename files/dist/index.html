@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulzameen (Balochistan) - A Living Digital Culture</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/static/images/logo.svg" alt="Gulzameen (Balochistan) logo" class="logo-img" style="height:40px; margin-right:10px;" />
+                <span>Gulzameen (Balochistan)</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Explore</a></li>
+                <li><a href="#regions" class="nav-link">Regions</a></li>
+                <li><a href="#culture" class="nav-link">Culture</a></li>
+                <li><a href="/collaborate" class="nav-link">Collaborate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        
+<!-- Hero Section -->
+<section class="hero" style="background: linear-gradient(135deg, rgba(139, 69, 19, 0.6) 0%, rgba(184, 115, 51, 0.6) 100%), url('/static/images/header-bg.jpg'), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><defs><pattern id=%22embroidery%22 x=%220%22 y=%220%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%225%22 fill=%22%238B6F47%22/><path d=%22M20,20 L80,80 M80,20 L20,80%22 stroke=%22%238B6F47%22 stroke-width=%221%22 opacity=%220.3%22/><circle cx=%2220%22 cy=%2220%22 r=%228%22 fill=%22none%22 stroke=%228B6F47%22 stroke-width=%221%22 opacity=%220.2%22/></pattern></defs><rect width=%221200%22 height=%22600%22 fill=%22%238B4513%22/><rect width=%221200%22 height=%22600%22 fill=%22url(%23embroidery)%22/></svg>'); background-size: cover; background-position: center;">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <i class="fas fa-leaf"></i>
+            <span>A Living Digital Culture</span>
+        </div>
+        <h1 class="hero-title">Gulzameen <span style="font-weight:600;">(Balochistan)</span></h1>
+        <p class="hero-subtitle">
+            Explore the living heritage of Balochistan. Discover folk tales, music, patterns, 
+            and traditions that evolve with every contribution from our global community.
+        </p>
+        <div class="hero-buttons">
+            <a href="#regions" class="btn btn-primary">
+                <i class="fas fa-compass"></i> Explore Culture
+            </a>
+            <a href="#contribute" class="btn btn-secondary">
+                <i class="fas fa-arrow-right"></i> Start Journey
+            </a>
+        </div>
+    </div>
+    
+    <div class="hero-stats">
+        <div class="stat">
+            <div class="stat-number">150+</div>
+            <div class="stat-label">Folk Stories</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">80+</div>
+            <div class="stat-label">Traditional Songs</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Pattern Designs</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Regions</div>
+        </div>
+    </div>
+</section>
+
+<!-- Regions Section -->
+<section id="regions" class="regions-section">
+    <div class="section-header">
+        <h2>Explore <span class="highlight">Balochistan</span></h2>
+        <p>Click on any region to discover its unique cultural treasures</p>
+    </div>
+
+    <!-- Interactive Map -->
+    <div class="map-container">
+        <!-- Replaced large map with the new elegant small map (keeps interactivity) -->
+        <svg class="map-svg" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid meet">
+            <defs>
+                <linearGradient id="smallMapGradientMain" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#f5f0eb;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#ede8e0;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <rect x="0" y="0" width="500" height="400" rx="20" fill="url(#smallMapGradientMain)" stroke="#d4af37" stroke-width="2" opacity="0.6" />
+
+            <path d="M 20 80 Q 150 60 280 90 T 490 80" stroke="#d4af37" stroke-width="2" fill="none" opacity="0.35"/>
+            <path d="M 20 160 Q 150 140 280 170 T 490 160" stroke="#b85c3c" stroke-width="2" fill="none" opacity="0.35"/>
+            <path d="M 20 240 Q 150 220 280 260 T 490 240" stroke="#d4af37" stroke-width="2" fill="none" opacity="0.35"/>
+
+            <!-- Elegant Region Pins -->
+            <g class="map-pin" data-region="eastern" onclick="showMapPopup('eastern')">
+                <circle cx="100" cy="300" r="18" fill="#b85c3c" opacity="0.95"/>
+                <text x="100" y="308" text-anchor="middle" fill="white" font-size="12">📍</text>
+            </g>
+
+            <g class="map-pin" data-region="western" onclick="showMapPopup('western')">
+                <circle cx="250" cy="180" r="18" fill="#d4af37" opacity="0.95"/>
+                <text x="250" y="188" text-anchor="middle" fill="#8B4513" font-size="12">📍</text>
+            </g>
+
+            <g class="map-pin" data-region="southern" onclick="showMapPopup('southern')">
+                <circle cx="360" cy="230" r="18" fill="#8B4513" opacity="0.95"/>
+                <text x="360" y="238" text-anchor="middle" fill="#d4af37" font-size="12">📍</text>
+            </g>
+        </svg>
+
+        <!-- Map Info Popup -->
+        <div class="map-info-popup" id="mapInfoPopup" style="display: none;">
+            <div class="popup-content">
+                <button class="popup-close" onclick="closeMapPopup()">&times;</button>
+                <h3 id="popupRegionName"></h3>
+                <p id="popupRegionDesc"></p>
+                <a id="popupRegionLink" class="btn btn-primary" style="display: inline-block;">
+                    <i class="fas fa-arrow-right"></i> Explore Region
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Traditional Grid View -->
+    <div class="section-header" style="margin-top: var(--space-4xl);">
+        <h3 style="font-size: 1.5rem;">Regions Overview</h3>
+    </div>
+
+    <div class="regions-grid">
+        
+        <a href="/region/eastern" class="region-card">
+            <div class="region-card-icon">
+                <i class="fas fa-map-pin"></i>
+            </div>
+            <h3>Baloch of Eastern Region</h3>
+            <p>Eastern Baloch traditions shaped by coastal plains, trade, and woven storytelling.</p>
+            <div class="region-card-footer">
+                <span class="explore-link">
+                    Explore <i class="fas fa-arrow-right"></i>
+                </span>
+            </div>
+        </a>
+        
+        <a href="/region/western" class="region-card">
+            <div class="region-card-icon">
+                <i class="fas fa-map-pin"></i>
+            </div>
+            <h3>Baloch of Western Region</h3>
+            <p>Western highland customs, oral epics, and mountain craft traditions.</p>
+            <div class="region-card-footer">
+                <span class="explore-link">
+                    Explore <i class="fas fa-arrow-right"></i>
+                </span>
+            </div>
+        </a>
+        
+        <a href="/region/southern" class="region-card">
+            <div class="region-card-icon">
+                <i class="fas fa-map-pin"></i>
+            </div>
+            <h3>Baloch of Southern Region</h3>
+            <p>Southern coastal and plain customs, a fusion of sea, spice and market rhythms.</p>
+            <div class="region-card-footer">
+                <span class="explore-link">
+                    Explore <i class="fas fa-arrow-right"></i>
+                </span>
+            </div>
+        </a>
+        
+    </div>
+</section>
+
+<!-- Cultural Treasures Section -->
+<section id="culture" class="treasures-section">
+    <div class="section-header">
+        <h2>Cultural <span class="highlight">Treasures</span></h2>
+        <p>Dive into the rich tapestry of Balochi heritage</p>
+    </div>
+
+    <div class="treasures-grid">
+        <div class="treasure-card">
+            <div class="treasure-icon">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <h3>Folk Stories</h3>
+            <p class="item-count">156 items</p>
+            <p>Ancient tales of heroes, spirits, and the land passed down through generations.</p>
+            <div class="featured-items">
+                <span class="tag">The Legend of Mir Chakar</span>
+                <span class="tag">Tales of Hammal</span>
+                <span class="tag">The Golden Deer</span>
+            </div>
+        </div>
+
+        <div class="treasure-card">
+            <div class="treasure-icon">
+                <i class="fas fa-music"></i>
+            </div>
+            <h3>Traditional Music</h3>
+            <p class="item-count">89 items</p>
+            <p>Haunting melodies played on sorod and benjo, telling stories of love and land.</p>
+            <div class="featured-items">
+                <span class="tag">Lori (Lullabies)</span>
+                <span class="tag">Zahirok</span>
+                <span class="tag">Nazenk</span>
+            </div>
+        </div>
+
+        <div class="treasure-card">
+            <div class="treasure-icon">
+                <i class="fas fa-palette"></i>
+            </div>
+            <h3>Embroidery Patterns</h3>
+            <p class="item-count">234 items</p>
+            <p>Intricate needlework designs that have adorned Balochi garments for centuries.</p>
+            <div class="featured-items">
+                <span class="tag">Mosaic Stitch</span>
+                <span class="tag">Mirror Work</span>
+                <span class="tag">Geometric Borders</span>
+            </div>
+        </div>
+
+        <div class="treasure-card">
+            <div class="treasure-icon">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <h3>Traditional Recipes</h3>
+            <p class="item-count">67 items</p>
+            <p>Savory dishes and sweet treats that define Balochi hospitality and gatherings.</p>
+            <div class="featured-items">
+                <span class="tag">Sajji</span>
+                <span class="tag">Kaak</span>
+                <span class="tag">Dampukht</span>
+            </div>
+        </div>
+
+        <div class="treasure-card">
+            <div class="treasure-icon">
+                <i class="fas fa-calendar-days"></i>
+            </div>
+            <h3>Festivals & Events</h3>
+            <p class="item-count">24 items</p>
+            <p>Celebrations that bring communities together in dance, music, and tradition.</p>
+            <div class="featured-items">
+                <span class="tag">Eid Celebrations</span>
+                <span class="tag">Harvest Festivals</span>
+                <span class="tag">Cultural Gatherings</span>
+            </div>
+        </div>
+
+        <div class="treasure-card">
+            <div class="treasure-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <h3>Community Wisdom</h3>
+            <p class="item-count">412 items</p>
+            <p>Proverbs, sayings, and wisdom that guide Balochi life and philosophy.</p>
+            <div class="featured-items">
+                <span class="tag">Life Proverbs</span>
+                <span class="tag">Traditional Sayings</span>
+                <span class="tag">Folk Philosophy</span>
+            </div>
+        </div>
+
+        
+        
+        <div class="treasure-card">
+            <div class="treasure-icon">
+                <i class="fas fa-gem"></i>
+            </div>
+            <h3>Bathal</h3>
+            <p class="item-count">—</p>
+            <p style="color:#666;">Reference: static/sounds/Bathal</p>
+        </div>
+        
+        
+    </div>
+</section>
+
+<!-- Contribution Section -->
+<section id="contribute" class="contribute-section">
+    <div class="contribute-container">
+        <div class="contribute-content">
+            <h2>Share Your Heritage</h2>
+            <p>Every contribution makes Balochi culture stronger. You can share:</p>
+            <ul class="contribution-list">
+                <li><i class="fas fa-pen-fancy"></i> <span>Family stories or oral tales</span></li>
+                <li><i class="fas fa-music"></i> <span>Folk songs or audio clips</span></li>
+                <li><i class="fas fa-image"></i> <span>Digital art inspired by patterns</span></li>
+                <li><i class="fas fa-utensils"></i> <span>Local recipes or traditions</span></li>
+            </ul>
+            <a id="startContributeBtn" class="btn btn-primary" href="/collaborate">
+                <i class="fas fa-arrow-right"></i> Start Contributing
+            </a>
+        </div>
+        <div class="contribute-visual">
+            <div class="contribution-placeholder">
+                <i class="fas fa-hands-praying"></i>
+                <p>Your contribution becomes part of our living culture</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Small Elegant Map Section (Middle) -->
+<section class="small-map-section">
+    <div class="small-map-wrapper">
+        <svg class="small-map-svg" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid meet">
+            <!-- Background with rounded corners -->
+            <defs>
+                <linearGradient id="smallMapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#f5f0eb;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#ede8e0;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            
+            <!-- Rounded rectangle background -->
+            <rect x="10" y="10" width="480" height="380" rx="30" fill="url(#smallMapGradient)" stroke="#d4af37" stroke-width="2" opacity="0.5"/>
+            
+            <!-- Wavy terrain lines -->
+            <path d="M 20 80 Q 150 60 280 90 T 490 80" stroke="#d4af37" stroke-width="2" fill="none" opacity="0.4"/>
+            <path d="M 20 160 Q 150 140 280 170 T 490 160" stroke="#b85c3c" stroke-width="2" fill="none" opacity="0.4"/>
+            <path d="M 20 240 Q 150 220 280 260 T 490 240" stroke="#d4af37" stroke-width="2" fill="none" opacity="0.4"/>
+            <path d="M 20 320 Q 150 300 280 340 T 490 320" stroke="#b85c3c" stroke-width="2" fill="none" opacity="0.4"/>
+
+            <!-- Region Pins - Smaller and more elegant -->
+            <g class="small-map-pin" data-region="eastern" onclick="window.goToRegion('eastern')">
+                <circle cx="100" cy="300" r="22" fill="#b85c3c" opacity="0.85"/>
+                <text x="100" y="308" text-anchor="middle" fill="white" font-size="12" font-weight="bold">📍</text>
+            </g>
+
+            <g class="small-map-pin" data-region="western" onclick="window.goToRegion('western')">
+                <circle cx="250" cy="180" r="22" fill="#d4af37" opacity="0.85"/>
+                <text x="250" y="188" text-anchor="middle" fill="#8B4513" font-size="12" font-weight="bold">📍</text>
+            </g>
+
+            <g class="small-map-pin" data-region="southern" onclick="window.goToRegion('southern')">
+                <circle cx="360" cy="230" r="22" fill="#8B4513" opacity="0.85"/>
+                <text x="360" y="238" text-anchor="middle" fill="#d4af37" font-size="12" font-weight="bold">📍</text>
+            </g>
+        </svg>
+    </div>
+</section>
+
+<!-- Recent Contributions + Weekly Challenge Section -->
+<section class="recent-contributions">
+    <div class="section-header">
+        <h2>Recent <span class="highlight">Contributions</span></h2>
+        <p>See what the community has recently shared</p>
+    </div>
+
+    <div class="contributions-grid">
+        <div class="contribution-item">
+            <div class="contribution-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="contribution-info">
+                <h4>New Folk Story</h4>
+                <p class="contribution-author">By Fatima Hassan</p>
+                <p class="contribution-text">"The Tale of the Desert Stars" - A story of navigation and hope</p>
+                <span class="contribution-time">2 hours ago</span>
+            </div>
+            <div class="contribution-badge">
+                <i class="fas fa-book-open"></i>
+            </div>
+        </div>
+
+        <div class="contribution-item">
+            <div class="contribution-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="contribution-info">
+                <h4>Traditional Song Recording</h4>
+                <p class="contribution-author">By Mir Ahmed Khan</p>
+                <p class="contribution-text">"Zahirok" - A haunting melody from the highlands</p>
+                <span class="contribution-time">5 hours ago</span>
+            </div>
+            <div class="contribution-badge music">
+                <i class="fas fa-music"></i>
+            </div>
+        </div>
+
+        <div class="contribution-item">
+            <div class="contribution-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="contribution-info">
+                <h4>Embroidery Pattern Design</h4>
+                <p class="contribution-author">By Aisha Baloch</p>
+                <p class="contribution-text">Modern interpretation of traditional mirror work patterns</p>
+                <span class="contribution-time">1 day ago</span>
+            </div>
+            <div class="contribution-badge pattern">
+                <i class="fas fa-palette"></i>
+            </div>
+        </div>
+
+        <div class="contribution-item">
+            <div class="contribution-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="contribution-info">
+                <h4>Family Recipe</h4>
+                <p class="contribution-author">By Zainab Malik</p>
+                <p class="contribution-text">"Dampukht" - Grandmother's secret recipe from Gwadar</p>
+                <span class="contribution-time">2 days ago</span>
+            </div>
+            <div class="contribution-badge recipe">
+                <i class="fas fa-utensils"></i>
+            </div>
+        </div>
+
+        <div class="contribution-item">
+            <div class="contribution-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="contribution-info">
+                <h4>Community Wisdom</h4>
+                <p class="contribution-author">By Hassan Ali</p>
+                <p class="contribution-text">"The patient stone polishes the rough water" - A timeless Balochi proverb</p>
+                <span class="contribution-time">3 days ago</span>
+            </div>
+            <div class="contribution-badge wisdom">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+        </div>
+
+        <div class="contribution-item">
+            <div class="contribution-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="contribution-info">
+                <h4>Festival Documentation</h4>
+                <p class="contribution-author">By Sana Baloch</p>
+                <p class="contribution-text">Photos and stories from the recent harvest celebration in Kalat</p>
+                <span class="contribution-time">1 week ago</span>
+            </div>
+            <div class="contribution-badge festival">
+                <i class="fas fa-calendar-days"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Daily Missions Section -->
+<section class="missions-section">
+    <div class="container">
+        <div class="missions-header">
+            <div class="mission-badge">
+                <i class="fas fa-star-half-alt"></i>
+                <span>Daily Cultural Missions</span>
+            </div>
+            <h2>Unlock the <span class="highlight-rust">Secrets</span></h2>
+            <p>Complete daily challenges to discover hidden cultural treasures. Solve riddles, complete patterns, and master traditional melodies.</p>
+        </div>
+
+        <!-- Daily Missions List -->
+        <div class="missions-list">
+            <!-- Mission 1 -->
+            <div class="mission-card">
+                <div class="mission-icon">
+                    <i class="fas fa-scroll"></i>
+                </div>
+                <div class="mission-content">
+                    <h4>Wisdom of the Elders</h4>
+                    <p>Solve three ancient Balochi riddles to unlock a hidden folk tale.</p>
+                    <div class="mission-meta">
+                        <span class="mission-time"><i class="far fa-clock"></i> 10 min</span>
+                        <span class="mission-points"><i class="fas fa-star"></i> 50 points</span>
+                    </div>
+                </div>
+                <div class="mission-difficulty">
+                    <span class="difficulty-badge medium">Medium</span>
+                </div>
+                <div class="mission-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="mission-reward">
+                    <i class="fas fa-gift"></i> Hidden Tale: The Mountain Spirit
+                </div>
+            </div>
+
+            <!-- Mission 2 -->
+            <div class="mission-card">
+                <div class="mission-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div class="mission-content">
+                    <h4>Complete the Border</h4>
+                    <p>Finish the traditional embroidery pattern by placing the correct motifs.</p>
+                    <div class="mission-meta">
+                        <span class="mission-time"><i class="far fa-clock"></i> 8 min</span>
+                        <span class="mission-points"><i class="fas fa-star"></i> 35 points</span>
+                    </div>
+                </div>
+                <div class="mission-difficulty">
+                    <span class="difficulty-badge easy">Easy</span>
+                </div>
+                <div class="mission-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="mission-reward">
+                    <i class="fas fa-gift"></i> Pattern: Desert Rose
+                </div>
+            </div>
+
+            <!-- Mission 3 -->
+            <div class="mission-card">
+                <div class="mission-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <div class="mission-content">
+                    <h4>Name That Melody</h4>
+                    <p>Listen to traditional instruments and identify the song being played.</p>
+                    <div class="mission-meta">
+                        <span class="mission-time"><i class="far fa-clock"></i> 15 min</span>
+                        <span class="mission-points"><i class="fas fa-star"></i> 75 points</span>
+                    </div>
+                </div>
+                <div class="mission-difficulty">
+                    <span class="difficulty-badge hard">Hard</span>
+                </div>
+                <div class="mission-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="mission-reward">
+                    <i class="fas fa-gift"></i> Rare Recording: Wedding Songs of Makran
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Weekly Challenge Section (Under Recent Contributions) -->
+<section class="weekly-challenge-section">
+    <div class="container">
+        <div class="weekly-challenge-card">
+            <div class="challenge-header">
+                <i class="fas fa-trophy"></i>
+                <span>WEEKLY CHALLENGE</span>
+            </div>
+            
+            <h2 class="challenge-title">The Chakar Chronicles</h2>
+            <p class="challenge-description">
+                Complete a week-long journey through the legendary tales of Mir Chakar Khan. 
+                Each day reveals a new chapter and challenge.
+            </p>
+
+            <div class="challenge-progress">
+                <div class="progress-label">Progress</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 42.8%;"></div>
+                </div>
+                <div class="progress-count">3/7 days</div>
+            </div>
+
+            <div class="challenge-rewards">
+                <h4>Unlock Rewards:</h4>
+                <ul class="reward-list">
+                    <li><i class="fas fa-check-circle"></i> Exclusive Story Collection</li>
+                    <li><i class="fas fa-check-circle"></i> Animated Tale</li>
+                    <li><i class="fas fa-check-circle"></i> Cultural Badge</li>
+                </ul>
+            </div>
+
+            <button class="btn btn-primary challenge-btn">
+                Continue Journey
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Ecosystem Visualization Section -->
+<section class="ecosystem-section">
+    <div class="section-header">
+        <h2>Our Growing <span class="highlight">Ecosystem</span></h2>
+        <p>This visualization represents our growing cultural ecosystem. Each node is a story, song, pattern, or recipe contributed by our community.</p>
+    </div>
+
+    <div class="ecosystem-visualization">
+        <svg viewBox="0 0 800 400" class="ecosystem-svg">
+            <!-- Background -->
+            <defs>
+                <radialGradient id="nodeGradient1" cx="30%" cy="30%">
+                    <stop offset="0%" style="stop-color:#d4af37;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#b85c3c;stop-opacity:0.4" />
+                </radialGradient>
+                <radialGradient id="nodeGradient2" cx="30%" cy="30%">
+                    <stop offset="0%" style="stop-color:#8B4513;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#d4af37;stop-opacity:0.4" />
+                </radialGradient>
+            </defs>
+
+            <!-- Connection Lines -->
+            <line x1="400" y1="200" x2="150" y2="100" stroke="#d4af37" stroke-width="2" opacity="0.3"/>
+            <line x1="400" y1="200" x2="650" y2="100" stroke="#d4af37" stroke-width="2" opacity="0.3"/>
+            <line x1="400" y1="200" x2="200" y2="320" stroke="#d4af37" stroke-width="2" opacity="0.3"/>
+            <line x1="400" y1="200" x2="600" y2="320" stroke="#d4af37" stroke-width="2" opacity="0.3"/>
+            <line x1="150" y1="100" x2="650" y2="100" stroke="#b85c3c" stroke-width="1" opacity="0.2"/>
+            <line x1="200" y1="320" x2="600" y2="320" stroke="#b85c3c" stroke-width="1" opacity="0.2"/>
+
+            <!-- Central Hub -->
+            <circle cx="400" cy="200" r="35" fill="url(#nodeGradient1)" class="node-center"/>
+            <text x="400" y="210" text-anchor="middle" fill="white" font-size="20" font-weight="bold" class="node-label">الثقافة</text>
+
+            <!-- Story Node -->
+            <circle cx="150" cy="100" r="25" fill="#8B4513" opacity="0.9" class="node story-node"/>
+            <text x="150" y="110" text-anchor="middle" fill="#d4af37" font-size="18" class="node-icon">📖</text>
+
+            <!-- Music Node -->
+            <circle cx="650" cy="100" r="25" fill="#b85c3c" opacity="0.9" class="node music-node"/>
+            <text x="650" y="110" text-anchor="middle" fill="#d4af37" font-size="18" class="node-icon">🎵</text>
+
+            <!-- Pattern Node -->
+            <circle cx="200" cy="320" r="25" fill="#8B4513" opacity="0.9" class="node pattern-node"/>
+            <text x="200" y="330" text-anchor="middle" fill="#d4af37" font-size="18" class="node-icon">🎨</text>
+
+            <!-- Recipe Node -->
+            <circle cx="600" cy="320" r="25" fill="#b85c3c" opacity="0.9" class="node recipe-node"/>
+            <text x="600" y="330" text-anchor="middle" fill="#d4af37" font-size="18" class="node-icon">🍲</text>
+
+            <!-- Additional Small Nodes -->
+            <circle cx="300" cy="80" r="15" fill="#d4af37" opacity="0.7" class="node small-node"/>
+            <circle cx="550" cy="150" r="15" fill="#b85c3c" opacity="0.7" class="node small-node"/>
+            <circle cx="100" cy="200" r="15" fill="#8B4513" opacity="0.7" class="node small-node"/>
+            <circle cx="700" cy="250" r="15" fill="#d4af37" opacity="0.7" class="node small-node"/>
+            <circle cx="280" cy="280" r="15" fill="#b85c3c" opacity="0.7" class="node small-node"/>
+            <circle cx="500" cy="300" r="15" fill="#8B4513" opacity="0.7" class="node small-node"/>
+        </svg>
+
+        <div class="ecosystem-legend">
+            <div class="legend-item">
+                <span class="legend-color" style="background: #8B4513;"></span>
+                <span>Folk Stories & Wisdom</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color" style="background: #b85c3c;"></span>
+                <span>Music & Traditions</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color" style="background: #d4af37;"></span>
+                <span>Patterns & Recipes</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Culture Growth Chart Section (Under Ecosystem) -->
+<section class="culture-growth-bottom">
+    <div class="container">
+        <div class="growth-chart">
+            <h3>Culture Growth</h3>
+            <p class="chart-subtitle">Weekly contribution trends across content types</p>
+            
+            <div class="chart-bars">
+                <!-- This Week -->
+                <div class="bar-row">
+                    <div class="bar-label">This Week</div>
+                    <div class="bar-container">
+                        <div class="bar-segment stories" style="width: 30%;"></div>
+                        <div class="bar-segment music" style="width: 25%;"></div>
+                        <div class="bar-segment patterns" style="width: 28%;"></div>
+                        <div class="bar-segment recipes" style="width: 17%;"></div>
+                    </div>
+                    <div class="bar-value">+234 items</div>
+                </div>
+
+                <!-- Last Week -->
+                <div class="bar-row">
+                    <div class="bar-label">Last Week</div>
+                    <div class="bar-container">
+                        <div class="bar-segment stories" style="width: 32%;"></div>
+                        <div class="bar-segment music" style="width: 22%;"></div>
+                        <div class="bar-segment patterns" style="width: 26%;"></div>
+                        <div class="bar-segment recipes" style="width: 20%;"></div>
+                    </div>
+                    <div class="bar-value">+189 items</div>
+                </div>
+
+                <!-- 2 Weeks Ago -->
+                <div class="bar-row">
+                    <div class="bar-label">2 Weeks Ago</div>
+                    <div class="bar-container">
+                        <div class="bar-segment stories" style="width: 35%;"></div>
+                        <div class="bar-segment music" style="width: 20%;"></div>
+                        <div class="bar-segment patterns" style="width: 28%;"></div>
+                        <div class="bar-segment recipes" style="width: 17%;"></div>
+                    </div>
+                    <div class="bar-value">+156 items</div>
+                </div>
+
+                <!-- 3 Weeks Ago -->
+                <div class="bar-row">
+                    <div class="bar-label">3 Weeks Ago</div>
+                    <div class="bar-container">
+                        <div class="bar-segment stories" style="width: 36%;"></div>
+                        <div class="bar-segment music" style="width: 19%;"></div>
+                        <div class="bar-segment patterns" style="width: 27%;"></div>
+                        <div class="bar-segment recipes" style="width: 18%;"></div>
+                    </div>
+                    <div class="bar-value">+142 items</div>
+                </div>
+            </div>
+
+            <!-- Chart Legend -->
+            <div class="chart-legend">
+                <div class="legend-item">
+                    <span class="legend-dot stories"></span>
+                    <span>Stories</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot music"></span>
+                    <span>Music</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot patterns"></span>
+                    <span>Patterns</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot recipes"></span>
+                    <span>Recipes</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- User Stats Section -->
+<section class="user-stats-section">
+    <div class="container">
+        <div class="user-stats-grid">
+            <div class="user-stat">
+                <div class="user-stat-icon trophy">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h4 class="user-stat-value">24</h4>
+                <p class="user-stat-label">Missions Completed</p>
+            </div>
+
+            <div class="user-stat">
+                <div class="user-stat-icon book">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h4 class="user-stat-value">12</h4>
+                <p class="user-stat-label">Stories Unlocked</p>
+            </div>
+
+            <div class="user-stat">
+                <div class="user-stat-icon palette">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h4 class="user-stat-value">8</h4>
+                <p class="user-stat-label">Patterns Mastered</p>
+            </div>
+
+            <div class="user-stat">
+                <div class="user-stat-icon star">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4 class="user-stat-value">1,250</h4>
+                <p class="user-stat-label">Cultural Points</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+    <!-- Feedback Section (bottom of app, placed above footer) -->
+    <section id="feedback" class="feedback-section" style="background:#fff;padding:28px 16px;border-top:1px solid #efe7dd;">
+        <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;">
+            <div style="flex:1;min-width:320px;">
+                <h3 style="color:var(--color-brown);margin:0 0 8px 0;">Community Feedback</h3>
+                <p style="color:#666;margin:0 0 12px 0;">What visitors say about this project. Add your feedback <a href="/feedback">here</a>.</p>
+
+                
+                <p style="color:#666;">No feedback yet — be the first to share your thoughts <a href="/feedback">here</a>.</p>
+                
+            </div>
+
+            <div style="width:260px;min-width:200px;">
+                <h4 style="margin:0 0 8px 0;color:var(--color-brown);">Share Feedback</h4>
+                <p style="color:#666;margin:0 0 12px 0;">Quick feedback helps guide improvements.</p>
+                <a href="/feedback" class="btn btn-primary" style="display:inline-block;">Give Feedback</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Left Section: Branding -->
+            <div class="footer-section footer-brand">
+                <h2 class="footer-title">Gulzameen (Balochistan)</h2>
+                <p class="footer-description">A living digital ecosystem celebrating the rich cultural heritage of Balochistan. Every visit, every contribution shapes our shared cultural story.</p>
+                
+                <div class="footer-creator">
+                    <strong>Project by: Mohaddeseh Badpa</strong>
+                    <a href="https://instagram.com/mohaddeseh.badpa" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i> @mohaddeseh.badpa
+                    </a>
+                    <a href="https://twitter.com/mohaddesehbadpa" target="_blank" title="Twitter" style="margin-left:10px;">
+                        <i class="fab fa-twitter"></i> @mohaddesehbadpa
+                    </a>
+                    <a href="https://github.com/mohaddesehbadpa" target="_blank" title="GitHub" style="margin-left:10px;">
+                        <i class="fab fa-github"></i> mohaddesehbadpa
+                    </a>
+                </div>
+            </div>
+
+            <!-- Middle Section: Explore -->
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="/region/eastern">Regions</a></li>
+                    <li><a href="#stories">Stories</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#patterns">Patterns</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#festivals">Festivals</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Section: Community -->
+            <div class="footer-section">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="#contribute">Contribute</a></li>
+                    <li><a href="#missions">Missions</a></li>
+                    <li><a href="#leaderboard">Leaderboard</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal Section -->
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#cookies">Cookie Settings</a></li>
+                    <li><a href="#copyright">Copyright Info</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="footer-social">
+            <a href="https://instagram.com/mohaddeseh.badpa" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://instagram.com/mohaddeseh.badpa" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/mohaddesehbadpa" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com/mohaddesehbadpa" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:mohaddesehbadpa0@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gulzameen (Balochistan). Preserving culture, one story at a time.</p>
+            <p>Made with <span class="heart">❤</span> by Mohaddeseh Badpa</p>
+            <p class="footer-thanks">A heartfelt thanks to Kamran Ayub and Jahanzeb Baloch for their support and love.</p>
+        </div>
+    </footer>
+
+    <script src="/static/main.js"></script>
+    <script src="/static/ads.js"></script>
+</body>
+</html>
