@@ -1,9 +1,0 @@
-[build]
-  command = "cp -r files/static files/dist/static"
-  publish = "files/dist"
-  functions = "files/netlify/functions"
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
